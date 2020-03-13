@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 
 import './Join.css';
 
+// Sign up page for the user to join into the room with the username and the room id. Once signed up user is directed to the chat room 
+
 const Join = () => {
     const[name, setName] = useState('');
     const[room, setRoom] = useState('');
