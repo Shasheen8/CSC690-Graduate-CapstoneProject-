@@ -4,6 +4,8 @@ const http = require ('http');
 
 const { addUser, removeUser, getUser, getUsersInRoom } = require('./users.js');
 
+
+//The server listen on prt 5000
 const PORT = process.env.PORT || 5000;
 
 const router = require('./router')
@@ -13,6 +15,8 @@ const io = socketio(server);
 
 app.use(router);
 
+//setting up connection using socket.io 
+
 io.on('connection', (socket) => {
     socket.on('join', ({ name, room }, callback) => {
         const { error, user } = addUser({ id: socket.id, name, room });
@@ -20,7 +24,9 @@ io.on('connection', (socket) => {
         if (error) return callback(error);
 
         socket.join(user.room);
-
+        
+        //the basic message the user recieves whe he joins a particular chat room
+        
         socket.emit('message', {user: 'admin', text: `${user.name}, welcome to the room ${user.room}.`});
         socket.broadcast.to(user.room).emit('message', {user: 'admin', text: `${user.name}, has joined!`});
         
