@@ -1,5 +1,6 @@
 import React from 'react';
 
+// This will be the contact page of the admin with some basic information
 
 
 const Contact = () =>(
