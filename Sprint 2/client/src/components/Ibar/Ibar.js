@@ -5,6 +5,8 @@ import onlineIcon from '../../icons/onlineIcon.png';
 
 import './Ibar.css';
 
+//top left corner icons for the user being online or offline
+
 const Ibar = ({ room }) => (
     <div className= "ibar">
         <div className="leftInnerContainer">
