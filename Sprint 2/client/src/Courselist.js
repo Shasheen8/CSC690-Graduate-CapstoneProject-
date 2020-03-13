@@ -2,6 +2,10 @@ import React, { useState } from 'react';
 import Course from './Course.js';
 import './App.css'
 
+
+// Home Page. This is a dummy page as of yet. This page will contain the list of faculty or individuals, and using their credentials a 
+//particular user will be able to connect to them in the chat room. 
+
 const Courselist = () => {
     const [courses, setCourses] = useState([
         {
