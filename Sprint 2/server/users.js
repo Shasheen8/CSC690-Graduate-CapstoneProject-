@@ -1,5 +1,7 @@
 const users = [];
 
+//User functionality whem setting up chat environment. 
+
 const addUser = ({ id, name, room }) => {
     name = name.trim().toLowerCase();
     room = room.trim().toLowerCase();
