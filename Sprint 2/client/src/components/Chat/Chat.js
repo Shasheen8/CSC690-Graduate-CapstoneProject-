@@ -62,6 +62,7 @@ const Chat= ({ location }) => {
         }
     }
 
+   //Integrating the Input and messaging features. 
 
     return (
         <div className="outerContainer"> 
