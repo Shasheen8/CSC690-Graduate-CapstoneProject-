@@ -1,5 +1,6 @@
 import React from 'react'
 
+// Search bar for searching the movie the user wants
 
 function Search ({ handleInput , search }) {
 	return (
