@@ -7,6 +7,10 @@ import Search from './moviecomponents/Search'
 import Results from './moviecomponents/Results'
 import Popup from './moviecomponents/Popup'
 
+// contents of the home page. with the navigation bar and the search bar
+
+
+
 function Hpage() {
   const [state, setState] = useState({
     s: "",
