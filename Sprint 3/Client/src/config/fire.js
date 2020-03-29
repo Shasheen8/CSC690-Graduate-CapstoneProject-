@@ -1,5 +1,8 @@
 import firebase from 'firebase';
 
+//Setting up google firebase for user authentication and setting up the database to record chat history. 
+
+
 const firebaseConfig = {
     apiKey: "AIzaSyBXvNHAAK8FaIkKptcCYKdZquEHHG9AuXM",
     authDomain: "capstone-2e49f.firebaseapp.com",
