@@ -2,7 +2,7 @@ import React from 'react';
 
 import './Contact.css'
 
-
+//Basic contact form. with user information. Might set it up with firebase. 
 
 const formValid = ({ formErrors, ...rest }) => {
     let valid = true;
