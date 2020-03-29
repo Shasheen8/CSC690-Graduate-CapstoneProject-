@@ -2,6 +2,7 @@ import React from 'react'
 
 import Result from './Result'
 
+//using a movie API 
 
 function Results ({ results, openPopup }) {
 	return (
