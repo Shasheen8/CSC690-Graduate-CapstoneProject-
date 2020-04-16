@@ -107,6 +107,8 @@ class DashboardComponent extends React.Component {
     this.messageRead();
   }
 
+  //Send the messages from autheticated user to the designated user.
+  
   goToChat = async (docKey, msg) => {
     const usersInChat = docKey.split(':');
     const chat = this.state.chats.find(_chat => usersInChat.every(_user => _chat.users.includes(_user)));
