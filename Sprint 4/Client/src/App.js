@@ -13,15 +13,18 @@ import DashboardComponent from './Dashboard/dashboard'
 const firebase =  require("firebase");
 require ("firebase/firebase-firestore");
 
+//Initialising firebase 
+//Setting up the database 
+
 firebase.initializeApp({
-    apiKey: "AIzaSyBXvNHAAK8FaIkKptcCYKdZquEHHG9AuXM",
-    authDomain: "capstone-2e49f.firebaseapp.com",
-    databaseURL: "https://capstone-2e49f.firebaseio.com",
-    projectId: "capstone-2e49f",
-    storageBucket: "capstone-2e49f.appspot.com",
-    messagingSenderId: "697274788808",
-    appId: "1:697274788808:web:0ee2c433a924c4aadbaefd",
-    measurementId: "G-DZ0W6J7QSK"
+    apiKey: "*****************************",
+    authDomain: "*************************",
+    databaseURL: "********************************",
+    projectId: "******************",
+    storageBucket: "************************",
+    messagingSenderId: "***************",
+    appId: "***************************",
+    measurementId: "*******************"
 })
 
 
