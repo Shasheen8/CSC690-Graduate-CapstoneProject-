@@ -12,6 +12,8 @@ import Button from '@material-ui/core/Button';
 
 const firebase = require("firebase");
 
+//Login Authentication. 
+
 
 class LoginComponent extends React.Component{
 
