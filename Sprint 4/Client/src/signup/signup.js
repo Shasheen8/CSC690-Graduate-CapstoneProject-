@@ -11,6 +11,8 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 const firebase = require("firebase");
 
+// Signup Authentication 
+
 class SignupComponent extends React.Component {
 
   constructor() {
@@ -101,6 +103,10 @@ class SignupComponent extends React.Component {
           friends: [],
           messages: []
         };
+      
+      
+      // registering users to the firebase database with their email and password 
+      
         firebase
           .firestore()
           .collection('users')
