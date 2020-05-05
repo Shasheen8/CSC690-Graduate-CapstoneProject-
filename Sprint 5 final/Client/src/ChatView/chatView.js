@@ -15,6 +15,8 @@ class ChatViewComponent extends React.Component {
       container.scrollTo(0, container.scrollHeight);
   }
 
+
+  
   render() {
 
     const { classes } = this.props;
