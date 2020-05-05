@@ -11,7 +11,8 @@ import './styles.js'
 import styles from './styles.js';
 const firebase = require("firebase");
 
-
+// Basic contact form. with the user information and is set up with google firebase. 
+// The data is directed towards the firebase database 
 
 class Contact extends React.Component {
         
