@@ -15,7 +15,8 @@ class ChatViewComponent extends React.Component {
       container.scrollTo(0, container.scrollHeight);
   }
 
-
+//The chat view where user can see the actual messages sent and recieved. 
+// Whenever a new nessage is sent the screen is updated with the message and the user email 
   
   render() {
 
