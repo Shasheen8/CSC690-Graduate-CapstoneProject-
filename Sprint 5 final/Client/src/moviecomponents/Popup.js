@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 
+//pops up information about the movie from the API and search results such as the Imdb rating, year is was made. movie synopsis, movie poster. 
+
 function Popup({ selected, closePopup }) {
 	return (
 		<section className="popup">
