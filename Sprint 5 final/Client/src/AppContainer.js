@@ -6,6 +6,8 @@ require("firebase/firestore"); // Required for side-effects
 
 class AppContainer extends React.Component {
 
+  //Saved authentication for the use rcurrently logged in. 
+  
   componentWillMount() {
     this.checkForSavedAuth();
   }
