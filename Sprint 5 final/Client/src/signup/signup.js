@@ -11,6 +11,10 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 const firebase = require("firebase");
 
+//SignUp page. contains 4 key parameters with are the email, password, confirmPasswd and userhandle. 
+//once signed up, the user is created in firebase and is directeed to the login page. 
+// The user is recognised with the unique email and Uid  
+
 class SignupComponent extends React.Component {
 
   constructor() {
@@ -19,6 +23,7 @@ class SignupComponent extends React.Component {
       email: null,
       password: null,
       passwordConfirmation: null,
+      userHandle: null, 
       signupError: ''
     };
   }
