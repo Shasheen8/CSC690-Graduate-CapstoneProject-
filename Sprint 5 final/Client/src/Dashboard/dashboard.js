@@ -8,6 +8,9 @@ import { Button, withStyles } from '@material-ui/core';
 const firebase = require("firebase");
 
 // using both .then and async/await
+// This dashboard component integrates with all the chat features and its components which includes 
+// Chattextbox, chat view, chatlist and newchat
+
 
 class DashboardComponent extends React.Component {
  
