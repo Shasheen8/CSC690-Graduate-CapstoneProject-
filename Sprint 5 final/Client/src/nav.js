@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import Hpage from "./Hpage";
 
-//functions for the navigation bar to slide when minimised. 
+//functions for the navigation bar to slide when screen is minimised. 
 
 const navSlide = () => {
     const burger = document.querySelector('.burger');
