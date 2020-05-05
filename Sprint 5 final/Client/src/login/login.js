@@ -13,6 +13,9 @@ import Button from '@material-ui/core/Button';
 const firebase = require("firebase");
 
 
+//Login page. Used to autheticate the user with his email and password. 
+//also uses the FBauth token middleware to authenticate the valid user with a token. 
+
 class LoginComponent extends React.Component{
 
     constructor(){
@@ -82,13 +85,22 @@ class LoginComponent extends React.Component{
         await firebase
           .auth()
           .signInWithEmailAndPassword(this.state.email, this.state.password)
-          .then(() => {
-            this.props.history.push('/dashboard');
-          }, err => {
-            this.setState({ serverError: true });
-            console.log('Error logging in: ', err);
-          });
-      };
+          .then(data => {
+              return data.user.getIdToken();
+            })
+           .then (token => {
+              return res.json({token});
+            })
+           .catch(err => {
+          console.error(err);
+          if(err.code === 'auth/wrong-password'){
+            return res
+            .status(403)
+            .json({ general: 'Wrong credentials, please try again'});
+          } else return res.status(500).json({this.props.history.push('/login')});
+            });
+            
+          
 
 }
 
