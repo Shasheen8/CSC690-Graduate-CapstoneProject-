@@ -118,6 +118,7 @@ class DashboardComponent extends React.Component {
   // Chat index could be different than the one we are currently on in the case
   // that we are calling this function from within a loop such as the chatList.
   // So we will set a default value and can overwrite it when necessary.
+  
   messageRead = () => {
     const chatIndex = this.state.selectedChat;
     const docKey = this.buildDocKey(this.state.chats[chatIndex].users.filter(_usr => _usr !== this.state.email)[0]);
