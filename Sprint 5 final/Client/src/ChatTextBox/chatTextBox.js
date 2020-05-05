@@ -13,6 +13,8 @@ class ChatTextBoxComponent extends React.Component {
     };
   }
 
+  //The actual textbox where users can type in messages and the messages are transfered from sender to reciever 
+  
   render() {
 
     const { classes } = this.props;
