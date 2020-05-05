@@ -14,7 +14,7 @@
   justify-content: space-around;
   align-items: center;
 }
-
+ //nav bar
 nav {
 	font-family: "Montserrat", sans-serif;
 	display: flex;
@@ -109,6 +109,8 @@ nav {
 		transform: translateX(0px);
 	}
 }
+
+// Movie components 
 
 .toggle .line1{
 	transform: rotate(-45deg) translate(-5px,6px);
