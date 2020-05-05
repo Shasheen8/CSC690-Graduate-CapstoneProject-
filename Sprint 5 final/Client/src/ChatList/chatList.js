@@ -13,6 +13,10 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import NotificationImportant from '@material-ui/icons/NotificationImportant';
 
 
+// This is the chatlist window where user basically see all the other users that he's chatting with. 
+// A list of friends. This also comes with a notification functionality, 
+// Whenevrr a user gets a new message, he would recieve a red pop up notification 
+
 class ChatListComponent extends React.Component {
 
   render() {
