@@ -1,5 +1,6 @@
 import React from 'react'
 
+// seach bar displayed on the home page to search different titles 
 
 function Search ({ handleInput , search }) {
 	return (
