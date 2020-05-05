@@ -10,6 +10,7 @@ import LoginComponent from './login/login'
 import SignupComponent from './signup/signup'
 import DashboardComponent from './Dashboard/dashboard'
 
+// Firebase set up and initialization 
 const firebase =  require("firebase");
 require ("firebase/firebase-firestore");
 
@@ -32,6 +33,8 @@ render(){
   <Router>
     <div classname= "App">
     
+     //Routes for pages linked 
+      
     <Switch>
     <Route path= "/dashboard" component= {DashboardComponent}/>
     <Route path= "/login" component={LoginComponent}/>
