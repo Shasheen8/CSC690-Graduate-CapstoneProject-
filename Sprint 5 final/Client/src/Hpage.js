@@ -8,6 +8,7 @@ import Results from './moviecomponents/Results'
 import Popup from './moviecomponents/Popup'
 
 // contents of the home page. with teh navigation bar and search bar 
+//Movie components are integrated 
 
 function Hpage() {
   const [state, setState] = useState({
@@ -15,6 +16,8 @@ function Hpage() {
     results: [],
     selected: {}
   });
+  
+  //Movie API
   const apiurl = "http://www.omdbapi.com/?apikey=dfe6d885";
 
   const search = (e) => {
