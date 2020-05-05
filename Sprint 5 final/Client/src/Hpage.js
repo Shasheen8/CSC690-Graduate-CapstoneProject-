@@ -29,6 +29,8 @@ function Hpage() {
     }
   }
   
+  //Integrated with the movie components.
+  
   const handleInput = (e) => {
     let s = e.target.value;
 
