@@ -63,6 +63,9 @@ class NewChatComponent extends React.Component {
       this.props.history.push('/login');
   }
 
+ // when user1 wants to send a new message to user 2   or wants to start a new convo with a new user.
+ // Using the  target email and message 
+            
   userTyping = (inputType, e) => {
     switch (inputType) {
       case 'username':
