@@ -55,7 +55,8 @@ function Hpage() {
     });
   }
   
-
+// The dashboard for the website and the layout 
+   
   return (
     <div className="App">
       <nav>      
