@@ -3,7 +3,7 @@ import React from 'react';
 const firebase = require("firebase");
 
 //MiddleWare for routes using tokens
-
+// Using token authorization for middle ware authentication. 
 const FBAuth = (req, res, next) => {
     let idToken;
     if (req.headers.authorization && req.headers.authorization.startsWith('Bearer ')){
