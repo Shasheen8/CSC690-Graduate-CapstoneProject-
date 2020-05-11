@@ -23,6 +23,7 @@ function Hpage() {
   const search = (e) => {
     if (e.key === "Enter") {  //type in the movie name and hit the enter key. 
       axios(apiurl + "&s=" + state.s).then(({ data }) => {
+        //get request to fetch the particular title of the movie we called for using axios 
         let results = data.Search;
 
         setState(prevState => {
