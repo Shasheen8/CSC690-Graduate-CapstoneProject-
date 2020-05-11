@@ -5,6 +5,8 @@ const firebase = require("firebase");
 
 class NewChatComponent extends React.Component {
 
+  // starting a new chat with a new user with the new user's email. 
+  
   constructor() {
     super();
     this.state = {
@@ -16,7 +18,7 @@ class NewChatComponent extends React.Component {
   render() {
 
     const { classes } = this.props;
-
+  //chat form with email and the message for the user. 
     return(
       <main className={classes.main}>
         <CssBaseline/>
@@ -84,7 +86,7 @@ class NewChatComponent extends React.Component {
   submitNewChat = async (e) => {
     e.preventDefault();
     const userExists = await this.userExists();
-    if(userExists) {
+    if(userExists) {  //check to know whether the user exists. or the chat with the user exits so it redirects to the chat instead. 
       const chatExists = await this.chatExists();
       chatExists ? this.goToChat() : this.createChat();
     }
@@ -92,7 +94,7 @@ class NewChatComponent extends React.Component {
 
   buildDocKey = () => [firebase.auth().currentUser.email, this.state.username].sort().join(':');
 
-  createChat = () => {
+  createChat = () => { //send a new message with a user that exists but is not your friend. 
     this.props.newChatSubmitFn({
       sendTo: this.state.username,
       message: this.state.message
@@ -101,7 +103,7 @@ class NewChatComponent extends React.Component {
 
   goToChat = () => this.props.goToChatFn(this.buildDocKey(), this.state.message);
 
-  chatExists = async () => {
+  chatExists = async () => {  //existing chat 
     const docKey = this.buildDocKey();
     const chat = await 
       firebase
@@ -112,7 +114,7 @@ class NewChatComponent extends React.Component {
     console.log(chat.exists);
     return chat.exists;
   }
-  userExists = async () => {
+  userExists = async () => { //existing user. 
     const usersSnapshot = await 
     firebase
       .firestore()
