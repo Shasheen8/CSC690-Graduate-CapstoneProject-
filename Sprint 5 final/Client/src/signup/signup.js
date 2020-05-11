@@ -17,6 +17,7 @@ const firebase = require("firebase");
 
 class SignupComponent extends React.Component {
 
+   //states with properties to rerender
   constructor() {
     super();
     this.state = {
