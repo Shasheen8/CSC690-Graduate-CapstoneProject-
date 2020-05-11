@@ -34,28 +34,30 @@ class ChatListComponent extends React.Component {
                 New Message
             </Button>
             <List>
-              {
+              {   //accessing the chats from te dashboard into list items. 
                 this.props.chats.map((_chat, _index) => {
                   return (
                     <div key={_index}>
                       <ListItem onClick={() => this.selectChat(_index)} 
                         className={classes.listItem} 
-                        selected={this.props.selectedChatIndex === _index} 
+                        selected={this.props.selectedChatIndex === _index} //current index is the currently active chat. 
                         alignItems="flex-start">
                         <ListItemAvatar>
-                          <Avatar alt="Remy Sharp">{_chat.users.filter(_user => _user !== this.props.userEmail)[0].split('')[0]}</Avatar>
+                          //looping over every user in the array. checks the first letter of username. and gives the username you are chatting with.    
+                          <Avatar alt="Remy Sharp">{_chat.users.filter(_user => _user !== this.props.userEmail)[0].split('')[0]}</Avatar> 
                         </ListItemAvatar>
                         <ListItemText 
+                          //display the username and chattext. 
                           primary={_chat.users.filter(_user => _user !== this.props.userEmail)[0]}
                           secondary={
                             <React.Fragment>
                               <Typography component='span'
-                                color='textPrimary'>
+                                color='textPrimary'>        //first 30 characters of the text
                                   {_chat.messages[_chat.messages.length - 1].message.substring(0, 30) + ' ...'}
                               </Typography>
                             </React.Fragment>
                           }/>
-                          {
+                          {  //red notification for the unread messages. 
                             _chat.receiverHasRead === false && !this.userIsSender(_chat) ? 
                             <ListItemIcon><NotificationImportant className={classes.unreadMessage}></NotificationImportant></ListItemIcon> :
                             null
