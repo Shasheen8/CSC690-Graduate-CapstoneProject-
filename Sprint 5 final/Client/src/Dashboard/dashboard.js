@@ -14,6 +14,7 @@ const firebase = require("firebase");
 
 class DashboardComponent extends React.Component {
  
+ //states with properties to rerender
   constructor() {
     super();
     this.state = {
@@ -28,10 +29,12 @@ class DashboardComponent extends React.Component {
 
   render() {
 
+   // destructuring the different properties from the materail-ui styles 
+// using different classes with the javascript objects
     const { classes } = this.props;
 
     if(this.state.email) {
-      return(
+      return(   //using props
         <div className='dashboard-container' id='dashboard-container'>
           <ChatListComponent history={this.props.history} 
             userEmail={this.state.email} 
@@ -86,6 +89,9 @@ class DashboardComponent extends React.Component {
 
   newChatBtnClicked = () => this.setState({ newChatFormVisible: true, selectedChat: null });
 
+     //selected chat index
+     //check whether the user is signed in or else redirect to logi via firebase. 
+     
   newChatSubmit = async (chatObj) => {
     const docKey = this.buildDocKey(chatObj.sendTo);
     await 
@@ -138,6 +144,9 @@ class DashboardComponent extends React.Component {
 
   clickedMessageWhereNotSender = (chatIndex) => this.state.chats[chatIndex].messages[this.state.chats[chatIndex].messages.length - 1].sender !== this.state.email;
 
+     //check whether the user is signed in or else redirect to login via firebase.
+     //when successfully mounted in the DOM. 
+     
   componentWillMount = () => {
       firebase.auth().onAuthStateChanged(async _usr => {
         if(!_usr)
@@ -145,9 +154,9 @@ class DashboardComponent extends React.Component {
         else {
           await firebase
             .firestore()
-            .collection('chats')
+            .collection('chats') //grab the current chats with user's email. 
             .where('users', 'array-contains', _usr.email)
-            .onSnapshot(async res => {
+            .onSnapshot(async res => { // real-time updates 
               const chats = res.docs.map(_doc => _doc.data());
               await this.setState({
                 email: _usr.email,
