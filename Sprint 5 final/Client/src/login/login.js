@@ -90,7 +90,7 @@ class LoginComponent extends React.Component{
           .auth()
           .signInWithEmailAndPassword(this.state.email, this.state.password)
           .then(data => {
-              return data.user.getIdToken();
+              return data.user.getIdToken(); // getting the token for authorized user with valid credentials 
             })
            .then (token => {
               return res.json({token});
@@ -99,7 +99,7 @@ class LoginComponent extends React.Component{
           console.error(err);
           if(err.code === 'auth/wrong-password'){
             return res
-            .status(403)
+            .status(403)  // firebase server error 
             .json({ general: 'Wrong credentials, please try again'});
           } else return res.status(500).json({this.props.history.push('/login')});
             });
