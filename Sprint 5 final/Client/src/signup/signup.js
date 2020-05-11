@@ -117,11 +117,11 @@ class SignupComponent extends React.Component {
           .set(userObj)
           .then(() => {    // send //server response 
             this.props.history.push('/login');
-        }, dbErr => {
+        }, dbErr => {   //database error component for firebase 
           console.log('Failed to add user to the database: ', dbErr);
           this.setState({ signupError: 'Failed to add user' });
         });
-    }, authErr => {
+    }, authErr => {  //authourization componenent for firebase 
       console.log('Failed to create user: ', authErr);
       this.setState({ signupError: 'Failed to add user' });
     });
