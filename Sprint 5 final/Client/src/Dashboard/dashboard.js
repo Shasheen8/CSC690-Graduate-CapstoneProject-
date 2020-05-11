@@ -44,7 +44,9 @@ class DashboardComponent extends React.Component {
             newChatBtnFn={this.newChatBtnClicked}>
           </ChatListComponent>
           {
-            this.state.newChatFormVisible ? null : <ChatViewComponent 
+           
+       //display the chat 
+           this.state.newChatFormVisible ? null : <ChatViewComponent 
               user={this.state.email} 
               chat={this.state.chats[this.state.selectedChat]}>
             </ChatViewComponent>
@@ -55,7 +57,9 @@ class DashboardComponent extends React.Component {
           {
             this.state.newChatFormVisible ? <NewChatComponent goToChatFn={this.goToChat} newChatSubmitFn={this.newChatSubmit}></NewChatComponent> : null
           }
-          <Button onClick={this.signOut} className={classes.signOutBtn}>Sign Out</Button>
+       //signout button
+       <Button onClick={this.signOut} className={classes.signOutBtn}>Sign Out</Button> 
+     
         </div>
       );
     } else {
