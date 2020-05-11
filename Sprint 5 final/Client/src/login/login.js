@@ -18,6 +18,7 @@ const firebase = require("firebase");
 
 class LoginComponent extends React.Component{
 
+    //states with properties to rerender
     constructor(){
         super();
         this.state = {
