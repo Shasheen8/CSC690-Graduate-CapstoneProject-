@@ -32,10 +32,12 @@ class ChatTextBoxComponent extends React.Component {
       </div>
     );
   }
+  //passing an event and checking the key code with the enter button. Also validate the message by making sure its not an empty string. 
   userTyping = (e) => e.keyCode === 13 ? this.submitMessage() : this.setState({ chatText: e.target.value });
-  messageValid = (txt) => txt && txt.replace(/\s/g, '').length;
+  messageValid = (txt) => txt && txt.replace(/\s/g, '').length; //finds all the characters with an emtpy space and validate. 
   userClickedInput = () => this.props.userClickedInputFn();
   submitMessage = () => {
+    //caling the parent funtion inside the dashboard => build key. 
     if(this.messageValid(this.state.chatText)) {
       this.props.submitMessageFn(this.state.chatText);
       document.getElementById('chattextbox').value = '';
