@@ -29,7 +29,10 @@ class SignupComponent extends React.Component {
   }
 
   render() {
-
+    
+// destructuring the different properties from the materail-ui styles 
+// using different classes with the javascript objects
+    
     const { classes } = this.props;
 
     return (
