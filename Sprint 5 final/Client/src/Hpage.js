@@ -21,7 +21,7 @@ function Hpage() {
   const apiurl = "http://www.omdbapi.com/?apikey=dfe6d885";
 
   const search = (e) => {
-    if (e.key === "Enter") {
+    if (e.key === "Enter") {  //type in the movie name and hit the enter key. 
       axios(apiurl + "&s=" + state.s).then(({ data }) => {
         let results = data.Search;
 
