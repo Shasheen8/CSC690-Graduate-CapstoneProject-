@@ -115,7 +115,7 @@ class SignupComponent extends React.Component {
           .collection('users')
           .doc(this.state.email)
           .set(userObj)
-          .then(() => {
+          .then(() => {    // send //server response 
             this.props.history.push('/login');
         }, dbErr => {
           console.log('Failed to add user to the database: ', dbErr);
