@@ -121,7 +121,7 @@ class SignupComponent extends React.Component {
           console.log('Failed to add user to the database: ', dbErr);
           this.setState({ signupError: 'Failed to add user' });
         });
-    }, authErr => {  //authourization componenent for firebase 
+    }, authErr => {  //authourization error componenent for firebase 
       console.log('Failed to create user: ', authErr);
       this.setState({ signupError: 'Failed to add user' });
     });
