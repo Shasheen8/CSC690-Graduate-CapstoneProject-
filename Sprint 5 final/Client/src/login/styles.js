@@ -1,3 +1,6 @@
+// taking theme which is an argument provided by material-ui, using it into a function and returns an object which has various parameters.
+//using these parameters for the styles. 
+
 const styles = theme => ({
     main: {
       width: 'auto',
