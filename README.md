@@ -129,24 +129,60 @@ Figure 1: Home Page
 
 ![](images/image7.png)
 
+![](images/image2.png)
+
+![](images/image11.png)
+
 Figure 2: Sign up authentication to add a new user in the database.
+
+![](images/image4.png)
 
 Figure 3: Login authentication
 
+![](images/image5.png)
+
 Figure 4: Login authentication with wrong user credentials
+
+![](images/image15.png)
 
 Figure 5: Signing up with a new user to the chat application
 
+![](images/image10.png)
+
 Figure 6: Sending a new message to user2
+
+![](images/image6.png)
 
 Figure 7: Data transfer between two users.
 
+![](images/image17.png)
+
 Figure 8: Receiving end
+
+![](images/image16.png)
 
 Figure 9: Contact form where users can contact the admin whenever necessary.
 
-Figure 10: For the Authentication and Database administration we used Google firebase. A NoSql database.
+![](images/image13.png)
+
+Figure 10: For the Authentication and Database administration we used Google firebase.
+
+![](images/image9.png)
+
+![](images/image18.png)
+
+![](images/image3.png)
+
+![](images/image8.png)
 
 Figure 11: When logging in with wrong credentials
 
-Figure 12: When logging in with valid credentials: -
+![](images/image12.png)
+
+Figure 12: When logging in with valid credentials: - token authetication. 
+
+![](images/image1.png)
+
+Figure 13: Settings the database rules so that no user has read/write privileges to the database. 
+
+![](images/image14.png)
