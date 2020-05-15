@@ -127,6 +127,8 @@ Screen Shots
 
 Figure 1: Home Page
 
+![](images/image7.png)
+
 Figure 2: Sign up authentication to add a new user in the database.
 
 Figure 3: Login authentication
