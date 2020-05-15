@@ -120,7 +120,7 @@ External Dependencies:
 
 4. Socket.IO v-(2.3.0): This library is used for communication between the client and server with uni-directional or bi-directional features. It has two set of libraries, each stored in the client side in browser and server side in the JavaScript NodeJS folder.
 
-  5.Google Firebase -  A NoSQL cloud database provided by google which we used for for authentication of user and database administration.
+5.  Google Firebase -  A NoSQL cloud database provided by google which we used for for authentication of user and database administration.
 
 
 Screen Shots
